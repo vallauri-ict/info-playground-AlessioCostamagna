@@ -1,6 +1,4 @@
-# info-playground-diegobelliardo
-
-_Prof. Diego Belliardo_
+# Costamagna Alessio 
 
 
-### Qua andremo ad inserire i vari progetti a scopo didattico che faremo durante le lezioni
+### Esercizio trigger e anche quello corretto in classe
