@@ -33,6 +33,7 @@ namespace TriggerTestAssieme
             this.dgvStoricoCancellazioni = new System.Windows.Forms.DataGridView();
             this.dgvStoricoAggiornamenti = new System.Windows.Forms.DataGridView();
             this.btnAggDB = new System.Windows.Forms.Button();
+            this.btnSP = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDriver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStoricoCancellazioni)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStoricoAggiornamenti)).BeginInit();
@@ -81,11 +82,22 @@ namespace TriggerTestAssieme
             this.btnAggDB.UseVisualStyleBackColor = true;
             this.btnAggDB.Click += new System.EventHandler(this.btnAggDB_Click);
             // 
+            // btnSP
+            // 
+            this.btnSP.Location = new System.Drawing.Point(178, 216);
+            this.btnSP.Name = "btnSP";
+            this.btnSP.Size = new System.Drawing.Size(91, 23);
+            this.btnSP.TabIndex = 4;
+            this.btnSP.Text = "btnSP";
+            this.btnSP.UseVisualStyleBackColor = true;
+            this.btnSP.Click += new System.EventHandler(this.btnSP_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(690, 450);
+            this.Controls.Add(this.btnSP);
             this.Controls.Add(this.btnAggDB);
             this.Controls.Add(this.dgvStoricoAggiornamenti);
             this.Controls.Add(this.dgvStoricoCancellazioni);
@@ -106,6 +118,7 @@ namespace TriggerTestAssieme
         private System.Windows.Forms.DataGridView dgvStoricoCancellazioni;
         private System.Windows.Forms.DataGridView dgvStoricoAggiornamenti;
         private System.Windows.Forms.Button btnAggDB;
+        private System.Windows.Forms.Button btnSP;
     }
 }
 

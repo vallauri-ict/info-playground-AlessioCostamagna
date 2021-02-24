@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace TriggerTestAssieme
 {
@@ -40,6 +41,32 @@ namespace TriggerTestAssieme
         {
             daDriver.Update(dtDriver);
             PopulateDgv(0);
+        }
+
+        private void btnSP_Click(object sender, EventArgs e)
+        {
+            DateTime dt = Convert.ToDateTime(Interaction.InputBox("Inserisci data"));
+            using(SqlConnection con = new SqlConnection(CONNECTION_STRING))
+            {
+                con.Open();
+                string sql = "restituisciDati";
+                SqlCommand cmd = new SqlCommand(sql, con);
+
+                SqlParameter data = new SqlParameter();
+                data.ParameterName = "data";
+                data.Direction = ParameterDirection.Input;
+                data.DbType = DbType.DateTime;
+                data.Value = dt;
+                cmd.Parameters.Add(data);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                DataTable dataTable = new DataTable();
+                dataTable.Load(reader);
+                dgvDriver.DataSource = dataTable;
+            }
+            
         }
 
         public Form1()
